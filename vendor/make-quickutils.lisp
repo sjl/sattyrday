@@ -10,6 +10,7 @@
                :rcurry
                :symb
                :with-gensyms
+               :deletef
 
                )
   :package "SATTYRDAY.QUICKUTILS")

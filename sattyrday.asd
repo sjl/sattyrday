@@ -30,3 +30,13 @@
   :entry-point "pong:toplevel"
 
   :components ((:module "src/001-pong" :serial t :components ((:file "main")))))
+
+(asdf:defsystem :sattyrday/002-afk
+  :depends-on (:sattyrday :chancery :bobbin)
+
+  :defsystem-depends-on (:deploy)
+  :build-operation "deploy-op"
+  :build-pathname "afk"
+  :entry-point "afk:toplevel"
+
+  :components ((:module "src/002-afk" :serial t :components ((:file "main")))))

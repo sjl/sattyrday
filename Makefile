@@ -31,3 +31,15 @@ pong-ccl: bin
 	mv bin build/pong
 
 pong: pong-sbcl
+
+afk-sbcl: bin build
+	echo ':sattyrday/002-afk' | /usr/local/bin/sbcl --noinform --load "src/build.lisp"
+	rm -rf build/afk
+	mv bin build/afk
+
+afk-ccl: bin
+	echo ':sattyrday/002-afk' | /usr/local/bin/ccl64 --load "src/build.lisp"
+	rm -rf build/afk
+	mv bin build/afk
+
+afk: afk-sbcl
